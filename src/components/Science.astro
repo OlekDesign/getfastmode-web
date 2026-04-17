@@ -1,0 +1,203 @@
+---
+---
+
+<section class="science section" aria-labelledby="science-heading">
+  <div class="container science__inner">
+
+    <!-- Left: copy -->
+    <div class="science__copy">
+      <p class="science__eyebrow">The science</p>
+      <h2 class="science__headline" id="science-heading">
+        This isn't a trend.<br>It's biology.
+      </h2>
+      <div class="science__body">
+        <p>
+          Intermittent fasting triggers measurable metabolic changes —
+          not theories, not influencer claims. After 12 hours without food,
+          your body begins burning stored fat as its primary fuel.
+        </p>
+        <p>
+          After 16 hours, it enters peak fat-burning mode and begins
+          autophagy — the cellular cleanup process recognized by the
+          Nobel Prize in 2016.
+        </p>
+        <p class="science__closer">
+          FastMode shows you exactly when these thresholds happen.
+          In real time. On your wrist.
+        </p>
+      </div>
+      <p class="science__source">
+        Referenced from Harvard Health Publishing and peer-reviewed
+        research on intermittent fasting and metabolic health.
+      </p>
+    </div>
+
+    <!-- Right: stats -->
+    <aside class="science__stats" aria-label="Key science figures">
+
+      <div class="science__stat">
+        <span class="science__stat-value science__stat-value--burn" aria-label="12 hours">12h</span>
+        <span class="science__stat-label">When fat burn begins</span>
+      </div>
+
+      <div class="science__stat">
+        <span class="science__stat-value science__stat-value--peak" aria-label="16 hours">16h</span>
+        <span class="science__stat-label">Peak fat burn &amp; autophagy kick in</span>
+      </div>
+
+      <div class="science__stat science__stat--last">
+        <span class="science__stat-value science__stat-value--nobel" aria-label="Nobel Prize 2016">Nobel<br>2016</span>
+        <span class="science__stat-label">Autophagy research awarded the Nobel Prize in Physiology</span>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+<style>
+  .science {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .science__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(var(--space-2xl), 7vw, 96px);
+    align-items: start;
+  }
+
+  /* ── Copy ── */
+  .science__eyebrow {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+  }
+
+  .science__headline {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: var(--space-xl);
+  }
+
+  .science__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .science__body p {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 46ch;
+  }
+
+  .science__closer {
+    font-weight: 500;
+    color: var(--color-text-primary) !important;
+  }
+
+  .science__source {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-tertiary);
+    max-width: 44ch;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* ── Stats ── */
+  .science__stats {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6px;
+  }
+
+  .science__stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-block: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .science__stat--last {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .science__stat-value {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    display: block;
+  }
+
+  .science__stat-value--burn  { color: var(--color-success); }
+  .science__stat-value--peak  { color: var(--color-primary); }
+  .science__stat-value--nobel { color: var(--color-text-primary); }
+
+  .science__stat-label {
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    color: var(--color-text-secondary);
+    max-width: 28ch;
+    display: block;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .science__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .science__stats {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0;
+      border-top: 1px solid var(--color-border);
+      padding-top: 0;
+    }
+
+    .science__stat {
+      flex: 1 1 140px;
+      border-top: none;
+      border-right: 1px solid var(--color-border);
+      padding: var(--space-lg);
+    }
+
+    .science__stat--last {
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .science__stat-value {
+      font-size: clamp(2rem, 8vw, 3rem);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .science__stats {
+      flex-direction: column;
+    }
+
+    .science__stat {
+      border-right: none;
+      border-top: 1px solid var(--color-border);
+      padding: var(--space-lg) 0;
+    }
+
+    .science__stat--last {
+      border-bottom: none;
+    }
+  }
+</style>

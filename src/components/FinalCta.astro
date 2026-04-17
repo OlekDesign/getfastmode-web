@@ -1,0 +1,144 @@
+---
+---
+
+<section class="cta section" aria-labelledby="cta-heading">
+  <div class="cta__rings" aria-hidden="true">
+    <div class="cta__ring cta__ring--1"></div>
+    <div class="cta__ring cta__ring--2"></div>
+    <div class="cta__ring cta__ring--3"></div>
+  </div>
+
+  <div class="container cta__inner">
+    <h2 class="cta__headline" id="cta-heading">
+      Your body already knows<br>how to fast.<br>
+      FastMode just makes<br>it <em class="cta__accent">visible.</em>
+    </h2>
+
+    <p class="cta__sub">
+      Free to download. Available on iPhone and Android.
+    </p>
+
+    <div class="cta__buttons">
+      <a
+        href="https://apps.apple.com/pl/app/fastmode-intermittent-fasting/id6760288550"
+        class="cta__btn cta__btn--primary"
+        data-get-app
+        aria-label="Get the FastMode app"
+      >
+        Get the App
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta {
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-block: clamp(80px, 12vw, 140px);
+  }
+
+  /* ── Decorative rings (echo hero motif) ── */
+  .cta__rings {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .cta__ring {
+    position: absolute;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+  }
+
+  .cta__ring--1 { width: min(90vw, 640px); aspect-ratio: 1; opacity: 0.5; }
+  .cta__ring--2 { width: min(64vw, 460px); aspect-ratio: 1; opacity: 0.35; border-color: color-mix(in srgb, var(--color-success) 30%, var(--color-border)); }
+  .cta__ring--3 { width: min(40vw, 290px); aspect-ratio: 1; opacity: 0.25; border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); }
+
+  /* ── Content ── */
+  .cta__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .cta__headline {
+    font-size: clamp(2.25rem, 5vw, 4.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+
+  .cta__accent {
+    font-style: italic;
+    color: var(--color-primary);
+  }
+
+  .cta__sub {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    margin-top: calc(var(--space-sm) * -1);
+  }
+
+  .cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    justify-content: center;
+    margin-top: var(--space-sm);
+  }
+
+  /* Buttons — same structure as Hero */
+  .cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px var(--space-xl);
+    border-radius: var(--radius-lg);
+    min-height: 52px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-fast),
+      box-shadow var(--transition-fast),
+      transform var(--transition-fast);
+    text-decoration: none;
+  }
+
+  .cta__btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+
+  .cta__btn:active { transform: scale(0.98); }
+
+  .cta__btn--primary {
+    background-color: var(--color-btn);
+    color: var(--color-btn-text);
+    font-weight: 500;
+    font-size: var(--text-base);
+  }
+
+  .cta__btn--primary:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 480px) {
+    .cta__buttons {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .cta__btn { justify-content: center; }
+  }
+</style>

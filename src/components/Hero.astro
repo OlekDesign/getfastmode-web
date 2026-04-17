@@ -1,0 +1,245 @@
+---
+---
+
+<section class="hero" aria-label="Hero">
+  <div class="container hero__inner">
+
+    <!-- Content -->
+    <div class="hero__content">
+      <div class="hero__eyebrow" aria-label="Intermittent fasting tracker, free on iOS and Android">
+        <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+        Free on iOS &amp; Android
+      </div>
+
+      <h1 class="hero__headline">
+        You already fast<br>every night.<br>
+        FastMode makes<br>it <em class="hero__accent">count.</em>
+      </h1>
+
+      <p class="hero__sub">
+        A smart intermittent fasting tracker that shows you exactly
+        what's happening in your body — hour by hour. Free to start.
+      </p>
+
+      <div class="hero__ctas">
+        <a
+          href="https://apps.apple.com/pl/app/fastmode-intermittent-fasting/id6760288550"
+          class="hero__btn hero__btn--primary"
+          data-get-app
+          aria-label="Get the FastMode app"
+        >
+          Get the App
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__ring hero__ring--outer"></div>
+      <div class="hero__ring hero__ring--inner"></div>
+      <div
+        class="screenshot-placeholder hero__screenshot"
+        data-label="ring timer · Fat Burn phase"
+      >
+        <!-- SCREENSHOT: hero app screenshot — ring timer in Fat Burn phase (green glow) -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: calc(100svh - 64px);
+    display: flex;
+    align-items: center;
+    padding-block: clamp(var(--space-3xl), 10vh, 96px);
+    background-color: var(--color-bg);
+    overflow: hidden;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+
+  /* ── Eyebrow ── */
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.02em;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero__eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-success);
+    flex-shrink: 0;
+  }
+
+  /* ── Headline ── */
+  .hero__headline {
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero__accent {
+    font-style: italic;
+    color: var(--color-primary);
+  }
+
+  /* ── Sub ── */
+  .hero__sub {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 46ch;
+    margin-bottom: var(--space-2xl);
+  }
+
+  /* ── CTAs ── */
+  .hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .hero__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px var(--space-xl);
+    border-radius: var(--radius-lg);
+    min-height: 52px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition:
+      background-color var(--transition-fast),
+      box-shadow var(--transition-fast),
+      transform var(--transition-fast);
+    text-decoration: none;
+  }
+
+  .hero__btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+
+  .hero__btn:active {
+    transform: scale(0.98);
+  }
+
+  .hero__btn--primary {
+    background-color: var(--color-btn);
+    color: var(--color-btn-text);
+    font-weight: 500;
+    font-size: var(--text-base);
+  }
+
+  .hero__btn--primary:hover {
+    opacity: 0.85;
+    box-shadow: none;
+  }
+
+  /* ── Visual ── */
+  .hero__visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 540px;
+  }
+
+  /* Decorative rings — evoke the app's ring timer */
+  .hero__ring {
+    position: absolute;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--color-border);
+    pointer-events: none;
+  }
+
+  .hero__ring--outer {
+    width: min(90%, 480px);
+    aspect-ratio: 1;
+    opacity: 0.6;
+  }
+
+  .hero__ring--inner {
+    width: min(62%, 330px);
+    aspect-ratio: 1;
+    opacity: 0.35;
+    border-color: var(--color-success);
+  }
+
+  /* Phone mockup placeholder */
+  .hero__screenshot {
+    position: relative;
+    z-index: 1;
+    width: min(72%, 280px);
+    aspect-ratio: 390 / 844;
+    border-radius: 36px;
+    box-shadow:
+      0 2px 4px rgba(0,0,0,0.04),
+      0 8px 24px rgba(0,0,0,0.08),
+      0 24px 48px rgba(0,0,0,0.06);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .hero__visual {
+      min-height: 340px;
+      order: -1;
+    }
+
+    .hero__ring--outer {
+      width: min(88%, 320px);
+    }
+
+    .hero__ring--inner {
+      width: min(60%, 220px);
+    }
+
+    .hero__screenshot {
+      width: min(55%, 180px);
+    }
+
+    .hero__headline {
+      font-size: clamp(2rem, 8vw, 2.75rem);
+    }
+
+    .hero__sub {
+      font-size: var(--text-base);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__ctas {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero__btn {
+      justify-content: center;
+    }
+  }
+</style>

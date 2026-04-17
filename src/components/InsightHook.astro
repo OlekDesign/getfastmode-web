@@ -1,0 +1,194 @@
+---
+---
+
+<section class="insight section" aria-labelledby="insight-heading">
+  <div class="container insight__inner">
+
+    <div class="insight__question">
+      <h2 class="insight__headline" id="insight-heading">
+        Did you know you're<br>already fasting<br>right now?
+      </h2>
+    </div>
+
+    <div class="insight__body">
+      <div class="insight__timeline" aria-label="Example: 7pm dinner to 7am wake-up is 12 hours of fasting">
+        <div class="insight__timeline-track">
+          <div class="insight__time-node">
+            <span class="insight__time-label">7pm</span>
+            <span class="insight__time-desc">Last meal</span>
+          </div>
+
+          <div class="insight__timeline-bar" aria-hidden="true">
+            <div class="insight__timeline-fill"></div>
+            <div class="insight__timeline-marker">
+              <span class="insight__marker-value">12h</span>
+              <span class="insight__marker-label">Fat Burn</span>
+            </div>
+          </div>
+
+          <div class="insight__time-node insight__time-node--end">
+            <span class="insight__time-label">7am</span>
+            <span class="insight__time-desc">Wake up</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="insight__copy">
+        FastMode picks up right where you left off — and shows you
+        exactly what your body is doing while you sleep.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .insight {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .insight__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(var(--space-2xl), 6vw, 96px);
+    align-items: center;
+  }
+
+  /* ── Headline ── */
+  .insight__headline {
+    font-size: clamp(1.875rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  /* ── Timeline ── */
+  .insight__timeline {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .insight__timeline-track {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .insight__time-node {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .insight__time-label {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--text-xl);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .insight__time-desc {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ── Bar between nodes ── */
+  .insight__timeline-bar {
+    flex: 1;
+    position: relative;
+    height: 2px;
+    background-color: var(--color-border);
+    margin-inline: var(--space-md);
+    margin-top: -18px; /* align with time-label baseline */
+  }
+
+  .insight__timeline-fill {
+    position: absolute;
+    inset: 0;
+    width: 75%;
+    background-color: var(--color-success);
+    opacity: 0.35;
+  }
+
+  .insight__timeline-marker {
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .insight__timeline-marker::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-success);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 18%, transparent);
+  }
+
+  .insight__marker-value {
+    position: absolute;
+    top: -32px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--text-xl);
+    color: var(--color-success);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .insight__marker-label {
+    position: absolute;
+    top: 20px;
+    font-size: var(--text-xs);
+    color: var(--color-success);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ── Copy ── */
+  .insight__copy {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 44ch;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .insight__inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-2xl);
+    }
+
+    .insight__headline {
+      font-size: clamp(1.75rem, 7vw, 2.5rem);
+    }
+
+    .insight__copy {
+      font-size: var(--text-base);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .insight__time-label {
+      font-size: var(--text-lg);
+    }
+
+    .insight__marker-value {
+      font-size: var(--text-lg);
+    }
+  }
+</style>

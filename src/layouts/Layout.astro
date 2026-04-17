@@ -1,23 +1,62 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'FastMode — Intermittent Fasting Tracker',
+  description = 'A smart intermittent fasting tracker that shows you exactly what\'s happening in your body — hour by hour. Free to start.',
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <link rel="icon" href="/favicon.ico?v=2" />
+    <meta name="generator" content={Astro.generator} />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <slot />
+    <script>
+      const IOS_URL = 'https://apps.apple.com/pl/app/fastmode-intermittent-fasting/id6760288550';
+      const ANDROID_URL = '/waiting-list';
+
+      const ua = navigator.userAgent;
+      const isAndroid = /Android/i.test(ua);
+      const isIOS = /iPad|iPhone|iPod/.test(ua) && !('MSStream' in window);
+
+      const href = isAndroid ? ANDROID_URL : IOS_URL;
+      const isExternal = !isAndroid;
+
+      document.querySelectorAll('[data-get-app]').forEach(el => {
+        const btn = el as HTMLAnchorElement;
+        btn.href = href;
+        if (isExternal) {
+          btn.target = '_blank';
+          btn.rel = 'noopener noreferrer';
+        } else {
+          btn.removeAttribute('target');
+          btn.removeAttribute('rel');
+        }
+      });
+    </script>
+  </body>
+</html>
