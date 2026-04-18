@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_claude-mem_mcp-search__search",
+      "mcp__plugin_claude-mem_mcp-search__get_observations",
+      "Bash(python3 *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4321)",
+      "Bash(node *)",
+      "Bash(curl *)",
+      "WebFetch(domain:paper.design)"
+    ]
+  },
+  "enabledPlugins": {
+    "impeccable@impeccable": true
+  }
+}
