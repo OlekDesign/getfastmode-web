@@ -2,22 +2,27 @@
 ---
 
 <header class="nav" id="nav" role="banner">
-  <div class="container nav__inner">
-    <a href="/" class="nav__logo" aria-label="FastMode home">
-      <img src="/favicon.svg" alt="" class="nav__logo-icon" aria-hidden="true" width="24" height="24" />
-      FastMode
-    </a>
-
-    <nav class="nav__links" aria-label="Download links">
+  <div class="nav__wrapper">
+    <div class="nav__pill">
+      <a href="/" class="nav__logo" aria-label="FastMode home">
+        <svg width="28" height="28" viewBox="0 0 660 660" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M61.392 218.321C56.577 196.622 57.316 174.059 63.541 152.723C69.767 131.386 81.276 111.967 97.004 96.267C112.73 80.567 132.165 69.093 153.506 62.91C174.848 56.727 197.404 56.035 219.083 60.897C231.016 42.228 247.455 26.863 266.884 16.221C286.313 5.578 308.108 0 330.259 0C352.41 0 374.205 5.578 393.634 16.221C413.064 26.863 429.502 42.228 441.435 60.897C463.148 56.014 485.743 56.703 507.118 62.901C528.493 69.099 547.954 80.605 563.69 96.347C579.427 112.09 590.928 131.559 597.124 152.942C603.319 174.326 604.008 196.93 599.127 218.651C617.789 230.588 633.147 247.034 643.785 266.471C654.424 285.907 660 307.711 660 329.871C660 352.03 654.424 373.834 643.785 393.271C633.147 412.708 617.789 429.153 599.127 441.09C603.987 462.779 603.295 485.344 597.114 506.693C590.934 528.043 579.465 547.485 563.771 563.218C548.077 578.952 528.666 590.466 507.338 596.694C486.01 602.921 463.455 603.661 441.765 598.844C429.848 617.585 413.396 633.015 393.934 643.705C374.471 654.395 352.627 660 330.424 660C308.221 660 286.377 654.395 266.915 643.705C247.452 633.015 231.001 617.585 219.083 598.844C197.404 603.706 174.848 603.014 153.506 596.831C132.165 590.648 112.73 579.174 97.004 563.474C81.276 547.774 69.767 528.355 63.541 507.019C57.316 485.682 56.577 463.119 61.392 441.42C42.586 429.514 27.096 413.044 16.362 393.54C5.629 374.037 0 352.135 0 329.871C0 307.607 5.629 285.704 16.362 266.201C27.096 246.698 42.586 230.227 61.392 218.321Z" fill="#48BEFF"/>
+          <path d="M351.764 247.106C396.546 242.098 436.909 274.34 441.92 319.122C446.931 363.903 414.692 404.267 369.911 409.284C325.126 414.297 284.756 382.054 279.744 337.269C274.733 292.483 306.978 252.115 351.764 247.106Z" fill="#FFFFFF"/>
+          <path d="M536.709 247.106C581.491 242.098 621.854 274.34 626.866 319.122C631.876 363.903 599.637 404.267 554.856 409.284C510.071 414.297 469.701 382.054 464.689 337.269C459.678 292.483 491.923 252.115 536.709 247.106Z" fill="#FFFFFF"/>
+          <path d="M377.14 275.736C405.092 273.732 429.38 294.757 431.404 322.708C433.427 350.659 412.419 374.962 384.47 377.005C356.493 379.049 332.16 358.016 330.135 330.038C328.11 302.059 349.16 277.741 377.14 275.736Z" fill="#1E1B18"/>
+          <path d="M562.085 275.736C590.037 273.732 614.326 294.757 616.349 322.708C618.372 350.659 597.364 374.962 569.415 377.005C541.438 379.049 517.105 358.016 515.08 330.038C513.055 302.059 534.105 277.741 562.085 275.736Z" fill="#1E1B18"/>
+        </svg>
+        FastMode
+      </a>
       <a
         href="https://apps.apple.com/pl/app/fastmode-intermittent-fasting/id6760288550"
-        class="nav__get-btn"
+        class="nav__btn"
         data-get-app
-        aria-label="Get the FastMode app"
+        aria-label="Download FastMode free"
       >
-        Get the App
+        Download Free
       </a>
-    </nav>
+    </div>
   </div>
 </header>
 
@@ -28,82 +33,61 @@
     left: 0;
     right: 0;
     z-index: 100;
-    transition: background-color var(--transition-base), backdrop-filter var(--transition-base);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
   }
 
-  .nav--scrolled {
-    background-color: rgba(250, 250, 250, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--color-border);
+  .nav__wrapper {
+    width: 100%;
+    max-width: 568px;
   }
 
-  .nav__inner {
+  .nav__pill {
+    background: white;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
+    padding: 10px 16px;
   }
 
   .nav__logo {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: var(--text-xl);
+    font-size: 22px;
     color: var(--color-text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    line-height: 1.27;
     transition: opacity var(--transition-fast);
   }
 
-  .nav__logo-icon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-  }
+  .nav__logo:hover { opacity: 0.75; }
 
-  .nav__logo:hover {
-    opacity: 0.8;
-  }
-
-  .nav__links {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav__get-btn {
+  .nav__btn {
     display: inline-flex;
     align-items: center;
-    padding: 10px var(--space-lg);
-    background-color: var(--color-btn);
-    color: var(--color-btn-text);
-    border-radius: var(--radius-lg);
+    padding: 10px 20px;
+    border-radius: 9999px;
+    background: #1E1B18;
+    color: #F7EFE9;
     font-family: var(--font-body);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    min-height: 44px;
-    transition:
-      opacity var(--transition-fast),
-      transform var(--transition-fast);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
 
-  .nav__get-btn:hover { opacity: 0.85; }
-  .nav__get-btn:active { transform: scale(0.97); }
+  .nav__btn:hover { opacity: 0.85; }
+  .nav__btn:active { transform: scale(0.97); }
 
-  .nav__get-btn:focus-visible {
-    outline: 2px solid var(--color-btn);
+  .nav__btn:focus-visible {
+    outline: 2px solid #1E1B18;
     outline-offset: 3px;
   }
 </style>
-
-<script>
-  const nav = document.getElementById('nav');
-  if (nav) {
-    const onScroll = () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 20);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
-</script>

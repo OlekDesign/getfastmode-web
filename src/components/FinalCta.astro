@@ -1,31 +1,20 @@
 ---
 ---
 
-<section class="cta section" aria-labelledby="cta-heading">
-  <div class="cta__rings" aria-hidden="true">
-    <div class="cta__ring cta__ring--1"></div>
-    <div class="cta__ring cta__ring--2"></div>
-    <div class="cta__ring cta__ring--3"></div>
-  </div>
-
-  <div class="container cta__inner">
-    <h2 class="cta__headline" id="cta-heading">
-      Your body already knows<br>how to fast.<br>
-      FastMode just makes<br>it <em class="cta__accent">visible.</em>
-    </h2>
-
-    <p class="cta__sub">
-      Free to download. Available on iPhone and Android.
-    </p>
-
-    <div class="cta__buttons">
+<section class="cta" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta__card">
+      <h2 class="cta__heading" id="cta-heading">
+        Start your first fast tonight
+      </h2>
+      <p class="cta__sub">Available on iPhone and Android.</p>
       <a
         href="https://apps.apple.com/pl/app/fastmode-intermittent-fasting/id6760288550"
-        class="cta__btn cta__btn--primary"
+        class="cta__btn"
         data-get-app
-        aria-label="Get the FastMode app"
+        aria-label="Download FastMode free"
       >
-        Get the App
+        Download Free
       </a>
     </div>
   </div>
@@ -33,112 +22,60 @@
 
 <style>
   .cta {
-    background-color: var(--color-bg);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding-block: clamp(80px, 12vw, 140px);
+    padding: 0 0 16px;
   }
 
-  /* ── Decorative rings (echo hero motif) ── */
-  .cta__rings {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-  }
-
-  .cta__ring {
-    position: absolute;
-    border-radius: var(--radius-full);
-    border: 1.5px solid var(--color-border);
-  }
-
-  .cta__ring--1 { width: min(90vw, 640px); aspect-ratio: 1; opacity: 0.5; }
-  .cta__ring--2 { width: min(64vw, 460px); aspect-ratio: 1; opacity: 0.35; border-color: color-mix(in srgb, var(--color-success) 30%, var(--color-border)); }
-  .cta__ring--3 { width: min(40vw, 290px); aspect-ratio: 1; opacity: 0.25; border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); }
-
-  /* ── Content ── */
-  .cta__inner {
-    position: relative;
-    z-index: 1;
+  .cta__card {
+    background: #51C0FD;
+    border-radius: 24px;
+    padding: 48px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-xl);
+    gap: 0;
+    overflow: hidden;
   }
 
-  .cta__headline {
-    font-size: clamp(2.25rem, 5vw, 4.25rem);
-    line-height: 1.1;
+  .cta__heading {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 1.08;
     letter-spacing: -0.03em;
-    max-width: 14ch;
-  }
-
-  .cta__accent {
-    font-style: italic;
-    color: var(--color-primary);
+    text-align: center;
+    color: #0A0A0A;
+    margin-bottom: 16px;
   }
 
   .cta__sub {
-    font-size: var(--text-lg);
-    color: var(--color-text-secondary);
-    margin-top: calc(var(--space-sm) * -1);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #0A0A0A;
+    margin-bottom: 36px;
   }
 
-  .cta__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-    justify-content: center;
-    margin-top: var(--space-sm);
-  }
-
-  /* Buttons — same structure as Hero */
   .cta__btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px var(--space-xl);
-    border-radius: var(--radius-lg);
-    min-height: 52px;
+    padding: 14px 24px;
+    border-radius: 9999px;
+    background: #1E1B18;
+    color: #F7EFE9;
     font-family: var(--font-body);
-    cursor: pointer;
-    transition:
-      background-color var(--transition-fast),
-      box-shadow var(--transition-fast),
-      transform var(--transition-fast);
-    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
+
+  .cta__btn:hover  { opacity: 0.85; }
+  .cta__btn:active { transform: scale(0.97); }
 
   .cta__btn:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid #1E1B18;
     outline-offset: 3px;
-  }
-
-  .cta__btn:active { transform: scale(0.98); }
-
-  .cta__btn--primary {
-    background-color: var(--color-btn);
-    color: var(--color-btn-text);
-    font-weight: 500;
-    font-size: var(--text-base);
-  }
-
-  .cta__btn--primary:hover {
-    opacity: 0.85;
-  }
-
-  @media (max-width: 480px) {
-    .cta__buttons {
-      flex-direction: column;
-      align-items: stretch;
-      width: 100%;
-      max-width: 320px;
-    }
-
-    .cta__btn { justify-content: center; }
   }
 </style>

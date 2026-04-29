@@ -57,8 +57,8 @@
   --leading-relaxed: 1.65;
 
   /* Layout */
-  --container-max: 1120px;
-  --container-padding: var(--space-lg);
+  --container-max: 600px;
+  --container-padding: 16px;
 
   /* Button — matches app's AppButton primary */
   --color-btn:      #1e1b18;

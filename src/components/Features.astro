@@ -1,318 +1,295 @@
 ---
 ---
 
-<section class="features section" aria-labelledby="features-heading">
+<section class="features" aria-labelledby="features-heading">
   <div class="container">
+    <h2 class="features__heading" id="features-heading">
+      Everything you need.<br />Nothing you don't.
+    </h2>
 
-    <header class="features__header">
-      <p class="features__eyebrow">Features</p>
-      <h2 class="features__headline" id="features-heading">
-        Everything you need.<br>Nothing you don't.
-      </h2>
-    </header>
+    <div class="features__list">
 
-    <ul class="features__grid" role="list">
-
-      <!-- 1. Live Metabolic Phases — featured (2 cols) -->
-      <li class="feature feature--metabolic">
-        <div class="feature__inner">
-          <h3 class="feature__title">Live Metabolic Phases</h3>
-          <p class="feature__body">
-            Your ring timer changes color as your fast deepens.
-            Know exactly where you are, always.
+      <!-- 1. Live Metabolic Phases -->
+      <div class="fcard">
+        <div class="fcard__text">
+          <h3 class="fcard__title">Live Metabolic Phases</h3>
+          <p class="fcard__body">
+            Your ring timer changes as you keep fasting. Know exactly where you are, always.
           </p>
-          <div class="feature__phases" aria-label="Fasting phases: Fasting, then Fat Burn at 12 hours, then Peak Fat Burn at 16 hours">
-            <span class="feature__phase">Fasting</span>
-            <span class="feature__phase-arrow" aria-hidden="true">→</span>
-            <span class="feature__phase feature__phase--burn">
-              Fat Burn
-              <span class="feature__phase-time">12h</span>
-            </span>
-            <span class="feature__phase-arrow" aria-hidden="true">→</span>
-            <span class="feature__phase feature__phase--peak">
-              Peak Fat Burn
-              <span class="feature__phase-time">16h</span>
-            </span>
+          <div class="fcard__phases" aria-label="Phases: Fasting, Fat Burn at 12h, Peak Fat Burn at 16h">
+            <span class="fcard__phase fcard__phase--muted">Fasting</span>
+            <span class="fcard__phase-arrow" aria-hidden="true">→</span>
+            <span class="fcard__phase fcard__phase--burn">Fat Burn 12h</span>
+            <span class="fcard__phase-arrow" aria-hidden="true">→</span>
+            <span class="fcard__phase fcard__phase--peak">Peak Fat Burn 16h</span>
           </div>
         </div>
-      </li>
+        <img
+          src="/meta-status.png"
+          class="fcard__img fcard__img--bar"
+          alt="App showing metabolic phases"
+          aria-hidden="true"
+        />
+      </div>
 
-      <!-- 2. Goal Date -->
-      <li class="feature feature--goal">
-        <div class="feature__inner">
-          <h3 class="feature__title">Your Personal Goal Date</h3>
-          <p class="feature__body">
-            Enter your stats once. FastMode calculates a realistic goal date
-            based on your body, pace, and fasting window. Not "a few months" — an actual date.
+      <!-- 2. Your Personal Goal Date -->
+      <div class="fcard fcard--overflow">
+        <div class="fcard__text">
+          <h3 class="fcard__title">Your Personal Goal Date</h3>
+          <p class="fcard__body">
+            Enter your stats once. FastMode calculates a realistic goal date. Not "a few months" — an actual date.
           </p>
         </div>
-      </li>
+        <img
+          src="/personal-plan.png"
+          class="fcard__img fcard__img--goal"
+          alt="App showing personal goal date"
+          aria-hidden="true"
+        />
+      </div>
 
-      <!-- 3. Streak System -->
-      <li class="feature feature--streak">
-        <div class="feature__inner">
-          <h3 class="feature__title">Streak System</h3>
-          <p class="feature__body">
+      <!-- 3. No Calorie Counting -->
+      <div class="fcard fcard--overflow fcard--nocalorie">
+        <div class="fcard__text">
+          <h3 class="fcard__title">No Calorie Counting</h3>
+          <p class="fcard__body">
+            Track your eating window, not every gram. It's about when you eat, not what.
+          </p>
+        </div>
+        <div class="fcard__salmon-box" aria-hidden="true">
+          <img
+            src="/timer.png"
+            class="fcard__img fcard__img--nocalorie"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- 4. Streak System -->
+      <div class="fcard fcard--overflow">
+        <div class="fcard__text">
+          <h3 class="fcard__title">Streak System</h3>
+          <p class="fcard__body">
             Build a daily fasting habit with visual streaks.
-            The longer your streak, the more you want to protect it.
-          </p>
-          <div class="feature__streak-row" aria-label="Example streak: 6 days completed, 1 upcoming">
-            <span class="feature__streak-dot feature__streak-dot--done" title="Day completed"></span>
-            <span class="feature__streak-dot feature__streak-dot--done" title="Day completed"></span>
-            <span class="feature__streak-dot feature__streak-dot--done" title="Day completed"></span>
-            <span class="feature__streak-dot feature__streak-dot--done" title="Day completed"></span>
-            <span class="feature__streak-dot feature__streak-dot--done" title="Day completed"></span>
-            <span class="feature__streak-dot feature__streak-dot--done" title="Day completed"></span>
-            <span class="feature__streak-dot feature__streak-dot--next" title="Today"></span>
-          </div>
-        </div>
-      </li>
-
-      <!-- 4. Streak Freeze -->
-      <li class="feature feature--freeze">
-        <div class="feature__inner">
-          <h3 class="feature__title">Streak Freeze</h3>
-          <p class="feature__body">
-            Life happens. Freeze your streak for one day without breaking it.
-            No all-or-nothing pressure.
           </p>
         </div>
-      </li>
+        <img
+          src="/streak.png"
+          class="fcard__img fcard__img--streak"
+          alt="App showing streak calendar"
+          aria-hidden="true"
+        />
+      </div>
 
-      <!-- 5. Smart Notifications -->
-      <li class="feature feature--notifications">
-        <div class="feature__inner">
-          <h3 class="feature__title">Smart Notifications</h3>
-          <p class="feature__body">
-            Get notified when you hit Fat Burn, when your eating window
-            is closing, or when your streak is at risk. Contextual, never spammy.
+      <!-- 5. Streak Freeze -->
+      <div class="fcard fcard--overflow">
+        <div class="fcard__text">
+          <h3 class="fcard__title">Streak Freeze</h3>
+          <p class="fcard__body">
+            Life happens. Freeze your streak for one day without breaking it. No all-or-nothing pressure.
           </p>
         </div>
-      </li>
+        <img
+          src="/freeze.png"
+          class="fcard__img fcard__img--freeze"
+          alt="App showing streak freeze"
+          aria-hidden="true"
+        />
+      </div>
 
-      <!-- 6. Weight Tracking — Pro (2 cols) -->
-      <li class="feature feature--weight">
-        <div class="feature__inner">
-          <div class="feature__title-row">
-            <h3 class="feature__title">Weight Tracking &amp; Trends</h3>
-            <span class="feature__pro-badge" aria-label="Pro feature">Pro</span>
-          </div>
-          <p class="feature__body">
-            Log your weight daily. Watch the trend line move toward your goal.
-            Over time, the data tells a story that the scale alone never could.
+      <!-- 6. Smart Notifications -->
+      <div class="fcard">
+        <div class="fcard__text">
+          <h3 class="fcard__title">Smart Notifications</h3>
+          <p class="fcard__body">
+            Get notified when you hit Fat Burn, when your eating window is closing, or when your streak is at risk. Contextual, never spammy.
           </p>
         </div>
-      </li>
+        <img
+          src="/notification.png"
+          class="fcard__img fcard__img--notification"
+          alt="App notification example"
+          aria-hidden="true"
+        />
+      </div>
 
-    </ul>
+      <!-- 7. Weight Tracking & Trends -->
+      <div class="fcard fcard--overflow">
+        <div class="fcard__text">
+          <h3 class="fcard__title">Weight Tracking &amp; Trends</h3>
+          <p class="fcard__body">
+            Log your weight daily. Watch the trend line move toward your goal. Over time, the data tells a story that the scale alone never could.
+          </p>
+        </div>
+        <img
+          src="/chart-card.png"
+          class="fcard__img fcard__img--weight"
+          alt="App showing weight tracking chart"
+          aria-hidden="true"
+        />
+      </div>
+
+    </div>
   </div>
 </section>
 
 <style>
   .features {
-    background-color: var(--color-bg);
+    padding: 52px 0 16px;
   }
 
-  /* ── Header ── */
-  .features__header {
-    margin-bottom: clamp(var(--space-2xl), 5vw, 64px);
-  }
-
-  .features__eyebrow {
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-text-tertiary);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: var(--space-md);
-  }
-
-  .features__headline {
-    font-size: clamp(2rem, 4vw, 3.25rem);
+  .features__heading {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 30px;
     line-height: 1.1;
     letter-spacing: -0.025em;
+    text-align: center;
+    color: var(--color-text-primary);
+    margin-bottom: 44px;
   }
 
-  /* ── Bento grid ── */
-  .features__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
-    gap: var(--space-md);
-    list-style: none;
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   /* ── Base card ── */
-  .feature {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-  }
-
-  .feature__inner {
-    padding: clamp(var(--space-lg), 2.5vw, var(--space-2xl));
-    height: 100%;
+  .fcard {
+    background: white;
+    border-radius: 24px;
+    padding: 32px 24px;
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: 24px;
+    box-shadow: 0px 24px 20px -14px rgba(0, 0, 0, 0.04);
   }
 
-  /* ── Grid placements ── */
-  /* Row 1: [Metabolic 2-cols] [Goal 1-col] [Streak 1-col] */
-  .feature--metabolic   { grid-column: span 2; }
-  .feature--goal        { grid-column: span 1; }
-  .feature--streak      { grid-column: span 1; }
-
-  /* Row 2: [Freeze 1-col] [Notifications 1-col] [Weight 2-cols] */
-  .feature--freeze        { grid-column: span 1; }
-  .feature--notifications { grid-column: span 1; }
-  .feature--weight        { grid-column: span 2; }
-
-  /* ── Featured: Metabolic Phases ── */
-  .feature--metabolic {
-    background-color: color-mix(in srgb, var(--color-success) 5%, var(--color-surface));
-    border-color: color-mix(in srgb, var(--color-success) 20%, var(--color-border));
+  .fcard--overflow {
+    overflow: hidden;
+    position: relative;
   }
 
-  /* ── Pro: Weight Tracking ── */
-  .feature--weight {
-    background-color: color-mix(in srgb, var(--color-primary) 4%, var(--color-surface));
-    border-color: color-mix(in srgb, var(--color-primary) 18%, var(--color-border));
-  }
-
-  /* ── Typography ── */
-  .feature__title {
-    font-size: var(--text-xl);
-    line-height: 1.25;
-    letter-spacing: -0.015em;
-  }
-
-  .feature--metabolic .feature__title {
-    font-size: clamp(var(--text-xl), 2vw, var(--text-2xl));
-  }
-
-  .feature__body {
-    font-size: var(--text-base);
-    line-height: var(--leading-relaxed);
-    color: var(--color-text-secondary);
-    flex: 1;
-  }
-
-  /* ── Phases progression ── */
-  .feature__phases {
+  .fcard__text {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: var(--space-sm) var(--space-md);
-    margin-top: auto;
-    padding-top: var(--space-md);
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .feature__phase {
+  .fcard__title {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: var(--text-sm);
+    font-size: 17px;
+    line-height: 1.29;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+    align-self: stretch;
+  }
+
+  .fcard__body {
+    font-family: var(--font-body);
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--color-text-secondary);
+    align-self: stretch;
+  }
+
+  /* ── Metabolic phases pills ── */
+  .fcard__phases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 18px;
+    align-self: stretch;
+  }
+
+  .fcard__phase {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1;
     letter-spacing: -0.01em;
-    color: var(--color-text-tertiary);
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
   }
 
-  .feature__phase--burn {
-    color: var(--color-success);
-  }
+  .fcard__phase--muted  { color: var(--color-text-tertiary); }
+  .fcard__phase--burn   { color: var(--color-success); }
+  .fcard__phase--peak   { color: var(--color-primary); }
 
-  .feature__phase--peak {
-    color: var(--color-primary);
-  }
-
-  .feature__phase-time {
-    font-size: var(--text-xs);
-    opacity: 0.75;
-    letter-spacing: 0.02em;
-  }
-
-  .feature__phase-arrow {
+  .fcard__phase-arrow {
     color: var(--color-border);
-    font-size: var(--text-sm);
-    font-weight: 400;
+    font-size: 13px;
+    line-height: 1;
   }
 
-  /* ── Streak dots ── */
-  .feature__streak-row {
-    display: flex;
-    gap: 7px;
-    margin-top: auto;
-    padding-top: var(--space-md);
-  }
+  /* ── Images ── */
 
-  .feature__streak-dot {
-    width: 22px;
-    height: 22px;
-    border-radius: var(--radius-full);
+  /* Full-width bar image (metabolic phases) */
+  .fcard__img--bar {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
     flex-shrink: 0;
   }
 
-  .feature__streak-dot--done {
-    background-color: var(--color-primary);
-    opacity: 0.9;
+  /* Positioned bottom images — shared */
+  .fcard__img--goal,
+  .fcard__img--streak,
+  .fcard__img--freeze,
+  .fcard__img--weight {
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    width: 84%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px 20px 0 0;
   }
 
-  .feature__streak-dot--next {
-    border: 2px solid var(--color-primary);
-    background-color: transparent;
-    opacity: 0.5;
-  }
+  .fcard--overflow:has(.fcard__img--goal)   { min-height: 320px; }
+  .fcard--overflow:has(.fcard__img--streak) { min-height: 360px; }
+  .fcard--overflow:has(.fcard__img--freeze) { min-height: 420px; }
+  .fcard--overflow:has(.fcard__img--weight) { min-height: 420px; }
 
-  /* ── Pro badge ── */
-  .feature__title-row {
+  /* No Calorie Counting: salmon box with timer inside */
+  .fcard--nocalorie { min-height: 300px; }
+
+  .fcard__salmon-box {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 84%;
+    max-width: 280px;
+    height: 172px;
+    background: #FEF5F3;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .feature__pro-badge {
-    font-family: var(--font-body);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
-    padding: 3px 10px;
-    border-radius: var(--radius-full);
+  .fcard__img--nocalorie {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Notification: full-width image with rounded corners */
+  .fcard__img--notification {
+    width: 100%;
+    height: 74px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
     flex-shrink: 0;
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 900px) {
-    .features__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .feature--metabolic,
-    .feature--weight { grid-column: span 2; }
-
-    .feature--goal,
-    .feature--streak,
-    .feature--freeze,
-    .feature--notifications { grid-column: span 1; }
-  }
-
-  @media (max-width: 540px) {
-    .features__grid {
-      grid-template-columns: 1fr;
-      gap: var(--space-sm);
-    }
-
-    .feature--metabolic,
-    .feature--goal,
-    .feature--streak,
-    .feature--freeze,
-    .feature--notifications,
-    .feature--weight { grid-column: span 1; }
   }
 </style>
